@@ -37,8 +37,11 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
 #### Vocal voice
 <img src="./figure/vocal_visualization.png" width="90%" height="auto">
 
-### Bass sound
+#### Bass sound
 <img src="./figure/bass_visualization.png" width="90%" height="auto">
+
+### Apply RND to existing T-F domain-based vocoders (Plug-and-play)
+<img src="./figure/pnp.png" width="50%" height="auto">
 
 ### Toward light-weight design
 <img src="./figure/light-weight-desgn.png" width="60%" height="auto">
