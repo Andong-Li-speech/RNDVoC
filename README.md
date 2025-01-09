@@ -23,7 +23,7 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
 
 ## Experiments
 
-### Bubble Figure on LibriTTS benchmark
+### Bubble Figure
 ![compare_ljs](./figure/bubble_figure.png)
 
 ### On LJSeech benchmark
@@ -32,6 +32,11 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
 ### On LibriTTS benchmark
 ![compare_ljs](./figure/performance_libritts.png)
 
+### Visualization on MUSDB18 test set
+#### Vocal voice
+![vocal_visualization](./figure/vocal_visualization.png)
+### Bass sound
+![bass_visualization](./figure/bass_visualization.png)
 
 ## Citation
 ```bibtex
