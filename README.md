@@ -25,7 +25,7 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
 
 ## Experiments
 
-### Bubble Figure
+### Bubble Figure on LibriTTS benchmark
 
 <img src="./figure/bubble_figure.png" width="60%" height="auto">
 
