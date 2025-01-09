@@ -2,6 +2,8 @@
 
 ### Authors: Andong Li, Tong Lei, Zhihang Sun, Rilin Chen, Xiaodong Li, and Chengshi Zheng
 
+<a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> ![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=Andong-Li-speech/RNDVoC)
+
 ---
 ## Update
 - **2025.01.09**: Create this repo.
