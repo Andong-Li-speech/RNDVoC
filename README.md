@@ -24,19 +24,24 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
 ## Experiments
 
 ### Bubble Figure
-![compare_ljs](./figure/bubble_figure.png)
+
+<img src="./figure/bubble_figure.png" width="60%" height="auto">
 
 ### On LJSeech benchmark
-![compare_ljs](./figure/performance_ljs.png)
+<img src="./figure/performance_ljs.png" width="90%" height="auto">
 
 ### On LibriTTS benchmark
-![compare_ljs](./figure/performance_libritts.png)
+<img src="./figure/performance_libritts.png" width="90%" height="auto">
 
 ### Visualization on MUSDB18 test set
 #### Vocal voice
-![vocal_visualization](./figure/vocal_visualization.png)
+<img src="./figure/vocal_visualization.png" width="90%" height="auto">
+
 ### Bass sound
-![bass_visualization](./figure/bass_visualization.png)
+<img src="./figure/bass_visualization.png" width="90%" height="auto">
+
+### Toward light-weight design
+<img src="./figure/light-weight-desgn.png" width="60%" height="auto">
 
 ## Citation
 ```bibtex
