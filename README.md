@@ -1,6 +1,6 @@
 # Scalable Neural Vocoder from Range-Null Space Decomposition (submitted to IEEE TPAMI)
 
-### Authors: Andong Li, Tong Lei, Zhihang Sun, Rilin Chen, Xiaodong Li, and Chengshi Zheng
+### Authors: Andong Li, Tong Lei, Zhihang Sun, Rilin Chen, Xiaodong Li, Dong Yu, and Chengshi Zheng
 
 <a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> ![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=Andong-Li-speech/RNDVoC)
 
@@ -52,7 +52,7 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
 ```bibtex
 @article{xxxx,
       title={Scalable Neural Vocoder from Range-Null Space Decomposition}, 
-      author={Andong Li and Tong Lei and Zhihang Sun and Rilin Chen and Xiaodong Li and Chengshi Zheng},
+      author={Andong Li and Tong Lei and Zhihang Sun and Rilin Chen and Xiaodong Li and Dong Yu and Chengshi Zheng},
       year={2025},
       eprint={xxxx.xxxxx},
       archivePrefix={xxxx},
