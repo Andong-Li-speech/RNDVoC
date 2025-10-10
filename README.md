@@ -1,4 +1,4 @@
-# Scalable Neural Vocoder from Range-Null Space Decomposition (submitted to IEEE TPAMI)
+# Scalable Neural Vocoder from Range-Null Space Decomposition
 
 ### Authors: Andong Li, Tong Lei, Zhihang Sun, Rilin Chen, Xiaodong Li, Dong Yu, and Chengshi Zheng
 
@@ -6,8 +6,8 @@
 
 ---
 ## Update
-- **2025.10.10**: Update load the project code and pretrained checkpoint.
-- **2025.04.29**： Our work has been accepted by IJCAI 2025!!
+- **2025.10.10**: Load the project code and pretrained checkpoint.
+- **2025.04.29**：Our work has been accepted by IJCAI 2025, the extended version has been submitted to TPAMI.
 - ~~**2025.01.09**: Create this repo.~~
   
 ## Abstract
@@ -24,6 +24,11 @@ under various configurations, we propose a simple yet effective strategy, which 
 stage into the data augmentation in the training stage. Comprehensive experiments are conducted on the LJSpeech and LibriTTS
 benchmarks. Quantitative and qualitative results show that while enjoying lightweight network structure and scalable inference
 paradigm, the proposed framework achieves state-of-the-art performance among existing advanced methods. 
+
+## ✨ Key Features
+- **Decent Interpretablity** – We rethink the vocoder task from a decent signal-decomposition perspective (Range-Null Space Decomposition), endowing it with elegant interpretability.
+- **Notable advantages in parameters/computational complexity/inference** – 3.14M parameters, 34.10GMacs/5s, and 10x speed up over BigVGAN.
+- **Powerful Reconstruction Capability** – Surpass BigVGAN-112M, and very recent RFWave (by our internal evaluations).
 
 ## 🚀 Quick Start
 
@@ -109,6 +114,7 @@ If you find this repo helpful, please cite our work:
   url       = {https://doi.org/10.24963/ijcai.2025/904},
 }
 ```
+
 
 
 
