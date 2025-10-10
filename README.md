@@ -55,7 +55,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 You can also generate wavefroms from synthesized mels, which is common in TTS/T2A...
 
 ```bash
-CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
+CUDA_VISIBLE_DEVICES=0 python3 inference.py  \
                            --cfg_filename ./cfgs/libritts/mid_rnd_shared_ende_libritts_config.json \
                            --use_mel_format \
                            --test_input_mels_dir ./test_wavs \
@@ -114,6 +114,7 @@ If you find this repo helpful, please cite our work:
   url       = {https://doi.org/10.24963/ijcai.2025/904},
 }
 ```
+
 
 
 
