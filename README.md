@@ -46,7 +46,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
                         --checkpoint_file_load ./Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g_libritts
 ```
 ### Inference from Synthesis Mel
-You can also generate wavefroms from synthesis mels, which is common in TTS/T2A...
+You can also generate wavefroms from synthesized mels, which is common in TTS/T2A...
 
 ```bash
 CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
@@ -56,6 +56,10 @@ CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
                            --test_output_dir ./test_wavs_est \
                            --checkpoint_file_load ./Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g_libritts
 ```
+
+### Training the neural vocoder with your own dataset
+* sss
+
 
 ## Experiments
 
@@ -93,5 +97,6 @@ CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
       url={xxxxxxxx}, 
 }
 ```
+
 
 
