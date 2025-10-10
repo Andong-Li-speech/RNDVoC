@@ -147,6 +147,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py  \
 
 ## 📚 Citation
 If you find this work helpful, please cite our paper:
+
 @inproceedings{ijcai2025p904,
   title     = {Learning Neural Vocoder from Range-Null Space Decomposition},
   author    = {Li, Andong and Lei, Tong and Sun, Zhihang and Chen, Rilin and Yin, Erwei and Li, Xiaodong and Zheng, Chengshi},
@@ -171,6 +172,7 @@ We welcome contributions! Please feel free to submit issues, fork the repository
     Made with ❤️ by the RNDVoC team
   </p>
 </div>
+
 
 
 
