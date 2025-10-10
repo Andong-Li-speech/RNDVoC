@@ -6,7 +6,8 @@
 
 ---
 ## Update
-- **2025.01.09**: Create this repo.
+- **2025.10.10**: Update load the project code and pretrained model weights.
+- ~~**2025.01.09**: Create this repo.~~
   
 ## Abstract
 Although deep neural networks have facilitated significant progress of neural vocoders in recent years, they usually suffer
@@ -22,6 +23,17 @@ under various configurations, we propose a simple yet effective strategy, which 
 stage into the data augmentation in the training stage. Comprehensive experiments are conducted on the LJSpeech and LibriTTS
 benchmarks. Quantitative and qualitative results show that while enjoying lightweight network structure and scalable inference
 paradigm, the proposed framework achieves state-of-the-art performance among existing advanced methods. 
+
+## 🚀 Quick Start
+
+### Checkpoint Download
+Pre-trained model checkpoints are available. Please use the following links to download the checkpoint:
+|  Model Name   |  Dataset    |  Sample Rate   |    NMel   | Training Steps
+|---------------|-------------|----------------|-----------|---------------|
+|🤗 [RNDVoC-LibriTTS](https://huggingface.co/AndongLi/RNDVoC/blob/main/best_g_libritts)  |   LibriTTS  |    24k Hz     |   100  |  2M (1M Generator + 1M Discriminator)
+|🤗 [RNDVoC-LJSpeech](https://huggingface.co/AndongLi/RNDVoC/blob/main/best_g_ijs)  |   LJSpeech  |    22.05k Hz     |   80  |  2M (1M Generator + 1M Discriminator)
+
+### Inference from 
 
 ## Experiments
 
@@ -59,3 +71,4 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
       url={xxxxxxxx}, 
 }
 ```
+
