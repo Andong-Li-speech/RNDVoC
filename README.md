@@ -1,4 +1,4 @@
-<img width="1494" height="325" alt="b03296e8-c838-40a8-a313-c6bc0960d766" src="https://github.com/user-attachments/assets/19153946-4e8a-47aa-ab0f-d847780f3827" /># Scalable Neural Vocoder from Range-Null Space Decomposition
+# Scalable Neural Vocoder from Range-Null Space Decomposition
 
 ### Authors: Andong Li, Tong Lei, Zhihang Sun, Rilin Chen, Xiaodong Li, Dong Yu, and Chengshi Zheng
 
@@ -172,6 +172,7 @@ If you find this work helpful, please cite our paper:
 
 ## 🤝 Contributing
 We welcome contributions! Please feel free to submit issues, fork the repository, and send pull requests.
+
 
 
 
