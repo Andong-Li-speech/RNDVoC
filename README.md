@@ -64,21 +64,23 @@ Pre-trained models are available on Hugging Face:
 
 #### From Natural Mel Spectrograms
 Reconstruct audio from mels extracted from original waveforms:
-#!/bin/bash
+```bash
 CUDA_VISIBLE_DEVICES=0 python3 inference.py \
                         --cfg_filename ./cfgs/libritts/mid_rnd_shared_ende_libritts_config.json \
                         --test_input_wavs_dir ./test_wavs \
                         --test_output_dir ./test_wavs_est \
                         --checkpoint_file_load ./Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g_libritts
+```
 #### From Synthesized Mel Spectrograms
 Generate waveforms from synthesized mels (common in TTS/T2A systems):
+```bash
 CUDA_VISIBLE_DEVICES=0 python3 inference.py  \
                            --cfg_filename ./cfgs/libritts/mid_rnd_shared_ende_libritts_config.json \
                            --use_mel_format \
                            --test_input_mels_dir ./test_wavs \
                            --test_output_dir ./test_wavs_est \
                            --checkpoint_file_load ./Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g_libritts
-
+```
 ### 3️⃣ Training with Custom Dataset
 <details>
   <summary>📋 Step-by-Step Training Guide</summary>
@@ -172,6 +174,7 @@ We welcome contributions! Please feel free to submit issues, fork the repository
     Made with ❤️ by the RNDVoC team
   </p>
 </div>
+
 
 
 
