@@ -7,7 +7,7 @@
 ---
 ## Update
 - **2025.10.10**: Load the project code and pretrained checkpoint.
-- **2025.04.29**：Our work has been accepted by IJCAI 2025, the extended version has been submitted to TPAMI.
+- **2025.04.29**: Our work has been accepted by IJCAI 2025, the extended version has been submitted to TPAMI.
 - ~~**2025.01.09**: Create this repo.~~
   
 ## Abstract
@@ -25,8 +25,8 @@ stage into the data augmentation in the training stage. Comprehensive experiment
 benchmarks. Quantitative and qualitative results show that while enjoying lightweight network structure and scalable inference
 paradigm, the proposed framework achieves state-of-the-art performance among existing advanced methods. 
 
-## ✨ Key Features
-- **Decent Interpretablity** – We rethink the vocoder task from a decent signal-decomposition perspective (Range-Null Space Decomposition), endowing it with elegant interpretability.
+## ✨ Key Features - Interpretability, lightweight, Performance, we want all!!!
+- **Decent Interpretablity** – We reformulate the vocoder task from a decent signal-decomposition perspective (Range-Null Space Decomposition), endowing it with elegant interpretability.
 - **Notable advantages in parameters/computational complexity/inference** – 3.14M parameters, 34.10GMacs/5s, and 10x speed up over BigVGAN-112M.
 - **Powerful Reconstruction Capability** – Surpass BigVGAN-112M, and very recent RFWave (by our internal evaluations).
 
@@ -114,6 +114,7 @@ If you find this repo helpful, please cite our work:
   url       = {https://doi.org/10.24963/ijcai.2025/904},
 }
 ```
+
 
 
 
