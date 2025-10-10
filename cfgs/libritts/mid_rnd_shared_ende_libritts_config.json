@@ -4,12 +4,8 @@
    "input_training_wav_list": "/data4/liandong/PROJECTS/RNDVoC/DatasetsScp/LibriTTS/train-full.txt",
    "input_validation_wav_list": "/data4/liandong/PROJECTS/RNDVoC/DatasetsScp/LibriTTS/val-full.txt",
    "raw_wavfile_path": "/data4/liandong/datasets/LibriTTS/LibriTTS",
-   "test_input_wavs_dir": "/data4/liandong/datasets/LibriTTS/LibriTTS/dev-clean-other-208-tonglei",
-   "test_input_mels_dir": "",
-   "test_mel_load": 0,
-   "test_output_dir": "/data4/liandong/PROJECTS/RNDVoC_ijcai/test_wavs_est",
 
-   "batch_size": 2,
+   "batch_size": 16,
    "learning_rate": 0.0002,
    "adam_b1": 0.8,
    "adam_b2": 0.99,
@@ -25,7 +21,6 @@
    "visualize_num": 10,
    "max_to_keep": 20,
    "checkpoint_path": "Experiments/LibriTTS/RNDVoc_shared_ende_benchmark",
-   "checkpoint_file_load": "/data4/liandong/PROJECTS/RNDVoC_ijcai/Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g",
    "save_best": true,
 
    "nrep": 2,
