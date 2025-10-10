@@ -1,4 +1,4 @@
-# Scalable Neural Vocoder from Range-Null Space Decomposition
+<img width="1494" height="325" alt="b03296e8-c838-40a8-a313-c6bc0960d766" src="https://github.com/user-attachments/assets/19153946-4e8a-47aa-ab0f-d847780f3827" /># Scalable Neural Vocoder from Range-Null Space Decomposition
 
 ### Authors: Andong Li, Tong Lei, Zhihang Sun, Rilin Chen, Xiaodong Li, Dong Yu, and Chengshi Zheng
 
@@ -19,15 +19,19 @@ A novel neural vocoder framework based on Range-Null Space Decomposition (RND) t
 
 
 ## 🔍 Abstract
-Although deep neural networks have facilitated significant progress of neural vocoders in recent years, they usually suffer from intrinsic challenges like opaque modeling, inflexible retraining under different input configurations, and parameter-performance trade-off. These inherent hurdles can heavily impede the development of this field.
-
-To resolve these problems, we propose a novel neural vocoder in the time-frequency (T-F) domain that bridges classical range-null decomposition (RND) theory with the vocoder task. The reconstruction of target spectrograms is formulated into the superimposition between range-space and null-space:
-- **Range-space**: Projects mel-domain representations into linear-scale domain
-- **Null-space**: Uses neural networks to infill spectral details
-
-Our elaborate dual-path framework enables hierarchical spectrum encoding/decoding with cross- and narrow-band modules for effective sub-band and time dimension modeling. We also propose a strategy to transform multi-condition adaptation in inference into data augmentation during training.
-
-Comprehensive experiments on LJSpeech and LibriTTS benchmarks show our framework achieves state-of-the-art performance while maintaining lightweight structure and scalable inference.
+Although deep neural networks have facilitated significant progress of neural vocoders in recent years, they usually suffer
+from intrinsic challenges like opaque modeling, inflexible retraining under different input configurations, and parameter-performance
+trade-off. These inherent hurdles can heavily impede the development of this field. To resolve these problems, in this paper, we
+propose a novel neural vocoder in the time-frequency (T-F) domain. Specifically, we bridge the connection between the classical
+range-null decomposition (RND) theory and the vocoder task, where the reconstruction of the target spectrogram is formulated into the
+superimposition between range-space and null-space. The former aims to project the representation in the original mel-domain into the
+target linear-scale domain, and the latter can be instantiated via neural networks to further infill the spectral details. To fully leverage
+the spectrum prior, an elaborate dual-path framework is devised, where the spectrum is hierarchically encoded and decoded, and the
+cross- and narrow-band modules are leveraged for effectively modeling along sub-band and time dimensions. To enable inference
+under various configurations, we propose a simple yet effective strategy, which transforms the multi-condition adaption in the inference
+stage into the data augmentation in the training stage. Comprehensive experiments are conducted on the LJSpeech and LibriTTS
+benchmarks. Quantitative and qualitative results show that while enjoying lightweight network structure and scalable inference
+paradigm, the proposed framework achieves state-of-the-art performance among existing advanced methods.
 
 
 ## ✨ Core Features
@@ -149,7 +153,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py  \
 
 ## 📚 Citation
 If you find this work helpful, please cite our paper:
-
+```bibtex
 @inproceedings{ijcai2025p904,
   title     = {Learning Neural Vocoder from Range-Null Space Decomposition},
   author    = {Li, Andong and Lei, Tong and Sun, Zhihang and Chen, Rilin and Yin, Erwei and Li, Xiaodong and Zheng, Chengshi},
@@ -164,9 +168,11 @@ If you find this work helpful, please cite our paper:
   doi       = {10.24963/ijcai.2025/904},
   url       = {https://doi.org/10.24963/ijcai.2025/904},
 }
+```
 
 ## 🤝 Contributing
 We welcome contributions! Please feel free to submit issues, fork the repository, and send pull requests.
+
 
 
 
