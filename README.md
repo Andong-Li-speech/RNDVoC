@@ -27,7 +27,7 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
 
 ## ✨ Key Features
 - **Decent Interpretablity** – We rethink the vocoder task from a decent signal-decomposition perspective (Range-Null Space Decomposition), endowing it with elegant interpretability.
-- **Notable advantages in parameters/computational complexity/inference** – 3.14M parameters, 34.10GMacs/5s, and 10x speed up over BigVGAN.
+- **Notable advantages in parameters/computational complexity/inference** – 3.14M parameters, 34.10GMacs/5s, and 10x speed up over BigVGAN-112M.
 - **Powerful Reconstruction Capability** – Surpass BigVGAN-112M, and very recent RFWave (by our internal evaluations).
 
 ## 🚀 Quick Start
@@ -114,6 +114,7 @@ If you find this repo helpful, please cite our work:
   url       = {https://doi.org/10.24963/ijcai.2025/904},
 }
 ```
+
 
 
 
