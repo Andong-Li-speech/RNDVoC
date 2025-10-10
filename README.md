@@ -7,6 +7,7 @@
 ---
 ## Update
 - **2025.10.10**: Update load the project code and pretrained checkpoint.
+- **2025.04.29**： Our work has been accepted by IJCAI 2025!!
 - ~~**2025.01.09**: Create this repo.~~
   
 ## Abstract
@@ -26,7 +27,7 @@ paradigm, the proposed framework achieves state-of-the-art performance among exi
 
 ## 🚀 Quick Start
 
-### Checkpoint Download
+### Checkpoint Download (Welcome for use)
 Pre-trained model checkpoints are available. Please use the following links to download the checkpoint:
 |  Model Name   |  Dataset    |  Sample Rate   |    NMel   | Training Steps
 |---------------|-------------|----------------|-----------|---------------|
@@ -65,8 +66,6 @@ CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
   ./train.sh
   ```
 
-
-
 ## Experiments
 
 ### Bubble Figure on LibriTTS benchmark
@@ -93,16 +92,24 @@ CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
 <img src="./figure/light-weight-desgn.png" width="60%" height="auto">
 
 ## Citation
+If you find this repo helpful, please cite our work:
 ```bibtex
-@article{xxxx,
-      title={Scalable Neural Vocoder from Range-Null Space Decomposition}, 
-      author={Andong Li and Tong Lei and Zhihang Sun and Rilin Chen and Xiaodong Li and Dong Yu and Chengshi Zheng},
-      year={2025},
-      eprint={xxxx.xxxxx},
-      archivePrefix={xxxx},
-      url={xxxxxxxx}, 
+@inproceedings{ijcai2025p904,
+  title     = {Learning Neural Vocoder from Range-Null Space Decomposition},
+  author    = {Li, Andong and Lei, Tong and Sun, Zhihang and Chen, Rilin and Yin, Erwei and Li, Xiaodong and Zheng, Chengshi},
+  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
+               Artificial Intelligence, {IJCAI-25}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {James Kwok},
+  pages     = {8131--8140},
+  year      = {2025},
+  month     = {8},
+  note      = {Main Track},
+  doi       = {10.24963/ijcai.2025/904},
+  url       = {https://doi.org/10.24963/ijcai.2025/904},
 }
 ```
+
 
 
 
