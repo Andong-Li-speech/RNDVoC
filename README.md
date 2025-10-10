@@ -2,103 +2,151 @@
 
 ### Authors: Andong Li, Tong Lei, Zhihang Sun, Rilin Chen, Xiaodong Li, Dong Yu, and Chengshi Zheng
 
-<a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> ![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=Andong-Li-speech/RNDVoC)
 
----
-## Update
-- **2025.10.10**: Load the project code and pretrained checkpoint.
-- **2025.04.29**: Our work has been accepted by IJCAI 2025, the extended version has been submitted to TPAMI.
-- ~~**2025.01.09**: Create this repo.~~
+## 📝 Overview
+A novel neural vocoder framework based on Range-Null Space Decomposition (RND) that achieves state-of-the-art performance with remarkable efficiency and interpretability. Our approach bridges classical signal processing theory with modern deep learning, offering a scalable solution for high-quality speech synthesis.
+
+
+## 📌 Key Updates
+<details>
+  <summary>📅 Full Update History</summary>
+  <ul>
+    <li><strong>2025.10.10</strong>: Project code and pretrained checkpoints released</li>
+    <li><strong>2025.04.29</strong>: Accepted by IJCAI 2025 • Extended version submitted to TPAMI</li>
+    <li><s>2025.01.09</s>: Repository initialized (archived)</li>
+  </ul>
+</details>
+
+
+## 🔍 Abstract
+Although deep neural networks have facilitated significant progress of neural vocoders in recent years, they usually suffer from intrinsic challenges like opaque modeling, inflexible retraining under different input configurations, and parameter-performance trade-off. These inherent hurdles can heavily impede the development of this field.
+
+To resolve these problems, we propose a novel neural vocoder in the time-frequency (T-F) domain that bridges classical range-null decomposition (RND) theory with the vocoder task. The reconstruction of target spectrograms is formulated into the superimposition between range-space and null-space:
+- **Range-space**: Projects mel-domain representations into linear-scale domain
+- **Null-space**: Uses neural networks to infill spectral details
+
+Our elaborate dual-path framework enables hierarchical spectrum encoding/decoding with cross- and narrow-band modules for effective sub-band and time dimension modeling. We also propose a strategy to transform multi-condition adaptation in inference into data augmentation during training.
+
+Comprehensive experiments on LJSpeech and LibriTTS benchmarks show our framework achieves state-of-the-art performance while maintaining lightweight structure and scalable inference.
+
+
+## ✨ Core Features
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
+  <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #3498db;">
+    <h3>🎯 Decent Interpretability</h3>
+    <p>Reformulates vocoder task from a signal-decomposition perspective (Range-Null Space Decomposition), providing clear interpretability.</p>
+  </div>
   
-## Abstract
-Although deep neural networks have facilitated significant progress of neural vocoders in recent years, they usually suffer
-from intrinsic challenges like opaque modeling, inflexible retraining under different input configurations, and parameter-performance
-trade-off. These inherent hurdles can heavily impede the development of this field. To resolve these problems, in this paper, we
-propose a novel neural vocoder in the time-frequency (T-F) domain. Specifically, we bridge the connection between the classical
-range-null decomposition (RND) theory and the vocoder task, where the reconstruction of the target spectrogram is formulated into the
-superimposition between range-space and null-space. The former aims to project the representation in the original mel-domain into the
-target linear-scale domain, and the latter can be instantiated via neural networks to further infill the spectral details. To fully leverage
-the spectrum prior, an elaborate dual-path framework is devised, where the spectrum is hierarchically encoded and decoded, and the
-cross- and narrow-band modules are leveraged for effectively modeling along sub-band and time dimensions. To enable inference
-under various configurations, we propose a simple yet effective strategy, which transforms the multi-condition adaption in the inference
-stage into the data augmentation in the training stage. Comprehensive experiments are conducted on the LJSpeech and LibriTTS
-benchmarks. Quantitative and qualitative results show that while enjoying lightweight network structure and scalable inference
-paradigm, the proposed framework achieves state-of-the-art performance among existing advanced methods. 
+  <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #2ecc71;">
+    <h3>⚡ Exceptional Efficiency</h3>
+    <p>3.14M parameters • 34.10GMacs/5s • 10x speedup over BigVGAN-112M</p>
+  </div>
+  
+  <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #e74c3c;">
+    <h3>🎧 Superior Reconstruction</h3>
+    <p>Outperforms BigVGAN-112M and recent RFWave (by internal evaluations)</p>
+  </div>
+</div>
 
-## ✨ Key Features
-- **Decent Interpretablity** – We reformulate the vocoder task from a decent signal-decomposition perspective (Range-Null Space Decomposition), endowing it with elegant interpretability.
-- **Notable advantages in parameters/computational complexity/inference** – 3.14M parameters, 34.10GMacs/5s, and 10x speed up over BigVGAN-112M.
-- **Powerful Reconstruction Capability** – Surpass BigVGAN-112M, and very recent RFWave (by our internal evaluations).
 
 ## 🚀 Quick Start
 
-### Checkpoint Download (Welcome for use)
-Pre-trained model checkpoints are available. Please use the following links to download the checkpoint:
-|  Model Name   |  Dataset    |  Sample Rate   |    NMel   | Training Steps
-|---------------|-------------|----------------|-----------|---------------|
-|🤗 [RNDVoC-LibriTTS](https://huggingface.co/AndongLi/RNDVoC/blob/main/best_g_libritts)  |   LibriTTS  |    24k Hz     |   100  |  2M (1M Generator + 1M Discriminator)
-|🤗 [RNDVoC-LJSpeech](https://huggingface.co/AndongLi/RNDVoC/blob/main/best_g_ijs)  |   LJSpeech  |    22.05k Hz     |   80  |  2M (1M Generator + 1M Discriminator)
+### 1️⃣ Checkpoint Download
+Pre-trained models are available on Hugging Face:
 
-### Inference from Natural Mel
-You can reconstruct target audio signals from natural mels, that it, you first extract the mels from the original waveforms, and then synthesis based on the neural vocoder.
+| Model Name | Dataset | Sample Rate | NMel | Training Steps |
+|------------|---------|-------------|------|----------------|
+| 🤗 [RNDVoC-LibriTTS](https://huggingface.co/AndongLi/RNDVoC/blob/main/best_g_libritts) | LibriTTS | 24k Hz | 100 | 2M (1M Generator + 1M Discriminator) |
+| 🤗 [RNDVoC-LJSpeech](https://huggingface.co/AndongLi/RNDVoC/blob/main/best_g_ijs) | LJSpeech | 22.05k Hz | 80 | 2M (1M Generator + 1M Discriminator) |
 
-```bash
+
+### 2️⃣ Inference Examples
+
+#### From Natural Mel Spectrograms
+Reconstruct audio from mels extracted from original waveforms:
 #!/bin/bash
-
 CUDA_VISIBLE_DEVICES=0 python3 inference.py \
                         --cfg_filename ./cfgs/libritts/mid_rnd_shared_ende_libritts_config.json \
                         --test_input_wavs_dir ./test_wavs \
                         --test_output_dir ./test_wavs_est \
                         --checkpoint_file_load ./Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g_libritts
-```
-### Inference from Synthesis Mel
-You can also generate wavefroms from synthesized mels, which is common in TTS/T2A...
-
-```bash
+#### From Synthesized Mel Spectrograms
+Generate waveforms from synthesized mels (common in TTS/T2A systems):
 CUDA_VISIBLE_DEVICES=0 python3 inference.py  \
                            --cfg_filename ./cfgs/libritts/mid_rnd_shared_ende_libritts_config.json \
                            --use_mel_format \
                            --test_input_mels_dir ./test_wavs \
                            --test_output_dir ./test_wavs_est \
                            --checkpoint_file_load ./Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g_libritts
-```
 
-### Training the neural vocoder with your own dataset
-* Prepare your own scp file for training and validation, and put them in ./DatasetsScp
-* Modify the configurations in the json file (e.g., ./cfg/libritts/mid_rnd_shared_ende_libritts_config.json), including input_training_wav_list, nput_validation_wav_list, raw_wavfile_path, and checkpoint_path...
-* Modify the func  ``get_dataset_filelist'' in the dataset.py according to your wavfile format in the scp
-* ```bash
-  ./train.sh
-  ```
+### 3️⃣ Training with Custom Dataset
+<details>
+  <summary>📋 Step-by-Step Training Guide</summary>
+  
+  1. Prepare your scp files for training/validation and place them in `./DatasetsScp`
+  2. Modify configuration json files (e.g., `./cfg/libritts/mid_rnd_shared_ende_libritts_config.json`) with:
+     - `input_training_wav_list`
+     - `input_validation_wav_list`
+     - `raw_wavfile_path`
+     - `checkpoint_path`
+  3. Adjust the `get_dataset_filelist` function in `dataset.py` to match your wavfile format in the scp
+  4. Start training:
+     ```bash
+     ./train.sh
+     ```
+</details>
 
-## Experiments
 
-### Bubble Figure on LibriTTS benchmark
+## 📊 Experimental Results
 
-<img src="./figure/bubble_figure.png" width="60%" height="auto">
+### Performance Comparison
+<div style="margin: 20px 0;">
+  <h4>🎯 Bubble Figure on LibriTTS Benchmark</h4>
+  <img src="./figure/bubble_figure.png" width="60%" height="auto" style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+</div>
 
-### On LJSeech benchmark
-<img src="./figure/performance_ljs.png" width="90%" height="auto">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+  <div>
+    <h4>📈 On LJSpeech Benchmark</h4>
+    <img src="./figure/performance_ljs.png" width="100%" height="auto" style="border-radius: 8px;">
+  </div>
+  <div>
+    <h4>📈 On LibriTTS Benchmark</h4>
+    <img src="./figure/performance_libritts.png" width="100%" height="auto" style="border-radius: 8px;">
+  </div>
+</div>
 
-### On LibriTTS benchmark
-<img src="./figure/performance_libritts.png" width="90%" height="auto">
 
-### Visualization on MUSDB18 test set
-#### Vocal voice
-<img src="./figure/vocal_visualization.png" width="90%" height="auto">
+### Spectral Visualizations
+<h4>🎵 MUSDB18 Test Set Analysis</h4>
 
-#### Bass sound
-<img src="./figure/bass_visualization.png" width="90%" height="auto">
+<div style="margin: 20px 0;">
+  <h5>Vocal Voice</h5>
+  <img src="./figure/vocal_visualization.png" width="90%" height="auto">
+</div>
 
-### Apply RND to existing T-F domain-based vocoders (Plug-and-play)
-<img src="./figure/pnp.png" width="50%" height="auto">
+<div style="margin: 20px 0;">
+  <h5>Bass Sound</h5>
+  <img src="./figure/bass_visualization.png" width="90%" height="auto">
+</div>
 
-### Toward light-weight design
-<img src="./figure/light-weight-desgn.png" width="60%" height="auto">
 
-## Citation
-If you find this repo helpful, please cite our work:
-```bibtex
+### Plug-and-Play Capability
+<div style="margin: 20px 0;">
+  <h4>🔌 Applying RND to Existing T-F Domain Vocoders</h4>
+  <img src="./figure/pnp.png" width="50%" height="auto">
+</div>
+
+
+### Lightweight Design
+<div style="margin: 20px 0;">
+  <h4>💡 Toward Light-weight Architecture</h4>
+  <img src="./figure/light-weight-desgn.png" width="60%" height="auto">
+</div>
+
+
+## 📚 Citation
+If you find this work helpful, please cite our paper:
 @inproceedings{ijcai2025p904,
   title     = {Learning Neural Vocoder from Range-Null Space Decomposition},
   author    = {Li, Andong and Lei, Tong and Sun, Zhihang and Chen, Rilin and Yin, Erwei and Li, Xiaodong and Zheng, Chengshi},
@@ -113,7 +161,18 @@ If you find this repo helpful, please cite our work:
   doi       = {10.24963/ijcai.2025/904},
   url       = {https://doi.org/10.24963/ijcai.2025/904},
 }
-```
+
+## 🤝 Contributing
+We welcome contributions! Please feel free to submit issues, fork the repository, and send pull requests.
+
+
+<div align="center">
+  <p style="margin-top: 40px; color: #666;">
+    Made with ❤️ by the RNDVoC team
+  </p>
+</div>
+
+
 
 
 
