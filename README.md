@@ -58,7 +58,10 @@ CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
 ```
 
 ### Training the neural vocoder with your own dataset
-* sss
+* Prepare your own scp file for training and validation, and put them in ./DatasetsScp
+* Modify the configurations in the json file (e.g., ./cfg/libritts/mid_rnd_shared_ende_libritts_config.json), including input_training_wav_list, nput_validation_wav_list, raw_wavfile_path, and checkpoint_path...
+* Modify the func  ``get_dataset_filelist'' in the dataset.py according to your wavfile format in the scp
+* ./train.sh
 
 
 ## Experiments
@@ -97,6 +100,7 @@ CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
       url={xxxxxxxx}, 
 }
 ```
+
 
 
 
