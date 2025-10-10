@@ -6,7 +6,7 @@
 
 ---
 ## Update
-- **2025.10.10**: Update load the project code and pretrained model weights.
+- **2025.10.10**: Update load the project code and pretrained checkpoint.
 - ~~**2025.01.09**: Create this repo.~~
   
 ## Abstract
@@ -33,7 +33,29 @@ Pre-trained model checkpoints are available. Please use the following links to d
 |🤗 [RNDVoC-LibriTTS](https://huggingface.co/AndongLi/RNDVoC/blob/main/best_g_libritts)  |   LibriTTS  |    24k Hz     |   100  |  2M (1M Generator + 1M Discriminator)
 |🤗 [RNDVoC-LJSpeech](https://huggingface.co/AndongLi/RNDVoC/blob/main/best_g_ijs)  |   LJSpeech  |    22.05k Hz     |   80  |  2M (1M Generator + 1M Discriminator)
 
-### Inference from 
+### Inference from Natural Mel
+You can reconstruct target audio signals from natural mels, that it, you first extract the mels from the original waveforms, and then synthesis based on the neural vocoder.
+
+```bash
+#!/bin/bash
+
+CUDA_VISIBLE_DEVICES=0 python3 inference.py \
+                        --cfg_filename ./cfgs/libritts/mid_rnd_shared_ende_libritts_config.json \
+                        --test_input_wavs_dir ./test_wavs \
+                        --test_output_dir ./test_wavs_est \
+                        --checkpoint_file_load ./Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g_libritts
+```
+### Inference from Synthesis Mel
+You can also generate wavefroms from synthesis mels, which is common in TTS/T2A...
+
+```bash
+CUDA_VISIBLE_DEVICES="0" python3 inference.py  \
+                           --cfg_filename ./cfgs/libritts/mid_rnd_shared_ende_libritts_config.json \
+                           --use_mel_format \
+                           --test_input_mels_dir ./test_wavs \
+                           --test_output_dir ./test_wavs_est \
+                           --checkpoint_file_load ./Experiments/LibriTTS/RNDVoc_shared_ende_benchmark/best_g_libritts
+```
 
 ## Experiments
 
@@ -71,4 +93,5 @@ Pre-trained model checkpoints are available. Please use the following links to d
       url={xxxxxxxx}, 
 }
 ```
+
 
