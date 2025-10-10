@@ -13,7 +13,7 @@ A novel neural vocoder framework based on Range-Null Space Decomposition (RND) t
   <ul>
     <li><strong>2025.10.10</strong>: Project code and pretrained checkpoints released</li>
     <li><strong>2025.04.29</strong>: Accepted by IJCAI 2025 • Extended version submitted to TPAMI</li>
-    <li><s>2025.01.09</s>: Repository initialized (archived)</li>
+    <li>2025.01.09</s>: Repository initialized (archived)</li>
   </ul>
 </details>
 
@@ -169,11 +169,6 @@ If you find this work helpful, please cite our paper:
 We welcome contributions! Please feel free to submit issues, fork the repository, and send pull requests.
 
 
-<div align="center">
-  <p style="margin-top: 40px; color: #666;">
-    Made with ❤️ by the RNDVoC team
-  </p>
-</div>
 
 
 
