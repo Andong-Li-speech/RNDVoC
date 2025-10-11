@@ -1,0 +1,13 @@
+librosa==0.9.2
+matplotlib==3.10.7
+nnAudio==0.3.3
+nnAudio==0.3.3
+numpy==1.23.5
+pesq==0.0.4
+progressbar33==2.4
+ptflops==0.7.3
+pymp==0.0.6
+soundfile==0.13.0
+torch==2.3.0+cu118
+torchaudio==2.3.0+cu118
+tqdm==4.66.4
